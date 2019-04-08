@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+/*разметка*/
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.col-1 {
+    width: 10%;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-6 {
+    width: 60%;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-8 {
+    width: 80%;
+}
+
+.col-9 {
+    width: 90%;
+}
+
+.col-10 {
+    width: 100%;
+}
+
+/*отображение видео эрана*/
+video {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+}
+
+#video-controls-box {
+    position: absolute;
+    z-index: 4;
+    height: 450px;
+    width: 800px;
+    pointer-events: none;
+}
+
+
+#video-content {
+    height: 84%;
+}
+
+#video-title {
+    height: 10%;
+}
+
+#video-title,
+.btn-group {
+    background-color: #eee;
+    opacity: 0.7;
+}
+
+#video-controls {
+    list-style-type: none;
+}
+
+ul.controls li {
+    display: inline;
+    /* Отображать как строчный элемент */
+    margin: 0 0 0 0;
+}
+
+#videoContainer {
+    width: 800px;
+    height: 450px;
+}
+
+
+/*прогрессбар и регулятор громкости*/
+#progress {
+    width: 100%;
+    margin: 15px 20px 0 20px;
+    pointer-events: auto;
+}
+
+#progress>span {
+    width: 100%;
+    background: #999;
+}
+
+#buffered {
+    background: #ccc;
+    pointer-events: auto;
+}
+
+#current {
+    background: #eee;
+    line-height: 0;
+    height: 10px;
+}
+
+#time {
+    color: #999;
+    font-size: 10pt;
+    text-align: center;
+    align-content: center;
+    margin-top: 2px;
+    width: 10%
+}
+
+#total,
+#volumeinc {
+    border-radius: 8px;
+    background: rgb(186, 187, 187);
+    padding: 0;
+    border: 10;
+    text-align: center;
+    height: 5px;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+#volumeinc {
+    width: 100px;
+    margin-top: 7px;
+    pointer-events: auto;
+}
+
+#current,
+#volumedecr {
+    background: rgb(2, 200, 250);
+    border-radius: 8px 0 0 8px;
+}
+
+#volumedecr {
+    width: 50px;
+    position: absolute;
+    z-index: 4;
+    height: 5px;
+    opacity: 0.5;
+    margin-top: 7px;
+    pointer-events: auto;
+}
+
+/*контролы*/
+button {
+    width: 3%;
+    height: 6px;
+    pointer-events: auto;
+}
+
+.btn-group {
+    margin: 5px 20px 0 20px;
+}
+
+.btn-group button {
+
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#playpause,
+#stop,
+#fs,
+#mute {
+    border: 0;
+}
+
+#playpause {
+    background: url(https://img.icons8.com/ios-glyphs/30/000000/play.png) no-repeat center;
+    background-size: contain;
+}
+
+#stop {
+    background: url(../sourse/icons-replay.png) no-repeat center;
+    background-size: contain;
+}
+
+#free_aria {
+    width: 50%;
+}
+
+#mute {
+    background: url(https://img.icons8.com/ios-glyphs/30/000000/speaker.png) no-repeat center;
+    background-size: contain;
+}
+
+#fs {
+    background: url(../sourse/icons-aspect-ratio.png) no-repeat center;
+    background-size: contain;
+}
+
+
+/*прелодер*/
+body {
+    background: #ECF0F1
+}
+
+.load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width: 100px;
+    height: 100px;
+}
+
+.load hr {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite
+}
+
+.load :first-child {
+    background: #19A68C;
+    animation-delay: -1.5s
+}
+
+.load :nth-child(2) {
+    background: #F63D3A;
+    animation-delay: -1s
+}
+
+.load :nth-child(3) {
+    background: #FDA543;
+    animation-delay: -0.5s
+}
+
+.load :last-child {
+    background: #193B48
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        transform: translate(0)
+    }
+
+    25% {
+        transform: translate(160%)
+    }
+
+    50% {
+        transform: translate(160%, 160%)
+    }
+
+    75% {
+        transform: translate(0, 160%)
+    }
+}
